@@ -34,10 +34,10 @@ namespace Dotin.Core.Services
 
         public async Task<int> GetURL(URL url)
         {
-            //URL uRL = new URL()
-            //{
-            //    Url = url.Url
-            //};
+            if (url is null)
+            {
+                return 0;
+            }
             await context.AddAsync(url);
             await context.SaveChangesAsync();
 
