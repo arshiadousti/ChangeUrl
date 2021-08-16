@@ -1,3 +1,5 @@
+using Dotin.Core.Interfaces;
+using Dotin.Core.Services;
 using Dotin.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +35,9 @@ namespace Dotin
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DotinConnection"));
             });
+
+
+            services.AddScoped<IRepository, Repository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

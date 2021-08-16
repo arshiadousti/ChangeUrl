@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Dotin.Controllers
 {
-    [ApiController]
     [Route("[controller]")]
+    [ApiController]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
